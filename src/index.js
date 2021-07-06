@@ -1,6 +1,11 @@
-const apiKey = "6F5TkPRcFw8TFoto82GGSf3W2yNExEZ6";
+let activo = true;
 
-const petition = fetch(`https://api.giphy.com/v1/gifs/random?apiKey=${apiKey}`);
-petition.then ( resp => {
-    console.log(resp);
-});
+let mensaje = activo ? "Activo" : "Inactivo";
+
+console.log(mensaje);
+
+activo = false;
+
+let mensajeInactivo = !activo && "Inactivo";
+
+console.log(mensajeInactivo);
